@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import mockVendas from './mockVendas';
+import mockData from './mockData';
 
 const initialState = {
-    vendas: mockVendas, // Estado inicial das vendas, pode ser uma lista vazia
+    vendas: mockData.vendas, // Estado inicial das vendas, pode ser uma lista vazia
     loading: false,
     error: null
 };
@@ -17,7 +17,7 @@ const vendasSlice = createSlice({
         },
         fetchVendasSuccess(state) {
             state.loading = false;
-            state.vendas = mockVendas;
+            state.vendas = mockData.vendas;
         },
         fetchVendasFailure(state, action) {
             state.loading = false;
@@ -28,15 +28,17 @@ const vendasSlice = createSlice({
         },
         updateVenda(state, action) {
             
-            const { id, nomeVendedor, nomeCliente, produtoVendido, ultimaAcao } = action.payload;
+            const { id, nomeVendedor, nomeCliente, produtoVendido, ultimaAcao, valor } = action.payload;
 
-            const updVenda = state.vendas.find(vendas => vendas.id === id);
-
+            
+            const updVenda = state.vendas.find(vendas => vendas.id == id);
+            
             if (updVenda) {
                 updVenda.nomeVendedor = nomeVendedor;
                 updVenda.nomeCliente = nomeCliente;
                 updVenda.produtoVendido = produtoVendido;
                 updVenda.ultimaAcao = ultimaAcao;
+                updVenda.valor = valor;
             }
         },
         deleteVenda(state, action) {

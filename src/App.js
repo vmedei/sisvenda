@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import Login from "./Pages/Login";
-import LandingPage from "./Pages/LandingPage";
-import Vendas from "./Pages/Vendas";
-import NovaVenda from "./Pages/NovaVenda";
-import EditarVenda from "./Pages/EditarVenda";
+import Home from "./View/Home";
+import Login from "./View/Login";
+import LandingPage from "./View/LandingPage";
+import Vendas from "./View/Vendas";
+import NovaVenda from "./View/NovaVenda";
+import EditarVenda from "./View/EditarVenda";
 import './App.css';
 
 function App() {
+    
     return (   
     
-    <body>
+    <div className="body">
         <Router>
             <Routes>
                 <Route exact path="/" element={<Home />}/>
@@ -21,7 +22,7 @@ function App() {
                 <Route path="/vendas/editar-venda/:id" element={ <EditarVenda /> }/>
             </Routes>
         </Router>
-    </body>
+    </div>
 
     );
 }

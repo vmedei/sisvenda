@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../Store/UserSlice';
-import { useNavigate } from 'react-router-dom';
 import icon from '../components/images/logo_icone.png';
-import './Login.css';
+import './styles/Login.css';
 import '../App.css'
 
 
@@ -39,30 +39,30 @@ const Login = () => {
     }
 
     return (
-        <div class="bg-login">
-            <div class="toptext">
+        <div className="bg-login">
+            <div className="toptext">
                 A <span>solução</span> de seus problemas <br />
                 como você precisa.
             </div>
-            <div class="card-login">
-                <div class="login-title">
+            <div className="card-login">
+                <div className="login-title">
                     <img src={icon} alt="icone"></img>
                     <h2>Login</h2>
                 </div>
-                <form onSubmit={handleLogin} class="form">
-                    <label class="label">Email</label>
+                <form onSubmit={handleLogin} className="form">
+                    <label className="label">Email</label>
                     <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
                     <label>Senha</label>
-                    <input class="input" type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    <input className="input" type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
                     <button type='submit'>
                         {loading ? 'Carregando...' : 'Login'}
                     </button>
                 </form>
                 {error && (
-                    <div class="msg-erro">{error}</div>
+                    <div className="msg-erro">{error}</div>
                 )}
                 {successMessage && (
-                    <div class="msg-sucess">{successMessage}</div>
+                    <div className="msg-sucess">{successMessage}</div>
                 )}
             </div>
         </div>

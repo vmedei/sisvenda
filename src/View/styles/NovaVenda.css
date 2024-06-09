@@ -1,0 +1,92 @@
+.card-nova-venda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    width: 400px;
+    padding: 30px;
+    border-radius: 9px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    gap: 20px;
+}
+
+.card-nova-venda form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 25px;}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-nova-venda .text, select {
+    padding: 5px 10px;
+    border-style: none;
+    border-bottom: 1px solid #9f7638;
+}
+
+.radio {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.radio input {
+    margin-right: 5px;
+}
+
+.form-group-valor {
+    display: flex;
+    align-items: center;
+}
+
+.valor-group {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.valor-group input {
+    margin-left: 40px;
+    padding: 6px 20px;
+    width: 100px;
+    border: 1px solid #9f7638;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.valor-group p {
+    padding: 5px 0;
+    position: absolute;
+    background-color: #9f7638;
+    color: white;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    width: 50px;
+    text-align: center;
+}
+
+.card-nova-venda button {
+    width: 150px;
+    margin-left: auto;
+}
+
+.msg-add{
+    font-size: 13px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: rgba(0, 255, 0, 0.5) 5px solid;
+    opacity: 0;
+    animation: fadeIn 0.1s forwards, fadeOut 0.1s forwards 2s;
+}

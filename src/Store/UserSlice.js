@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import mockUsers from './mockUsers';  // Importa os dados mockados
+import mockData from './mockData'; 
 
 export const loginUser = createAsyncThunk(
     'user/loginUser',
     async (userCredentials) => {
         // Simulação de uma chamada de API com dados mockados
-        const user = mockUsers.find(
+        const user = mockData.users.find(
             user => user.email === userCredentials.email && user.password === userCredentials.password
         );
 

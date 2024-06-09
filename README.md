@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# SisVenda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SisVenda é uma aplicação web desenvolvida para uma task do processo seletivo para o cargo de estágio em desenvolvimento para a empresa Solução Tributos. Feito em React, trata-se de um sistema simples para gerenciamento de vendas.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **React Redux**: Integração do Redux com o React para gerenciamento de estado.
+- **Redux Toolkit**: Conjunto de ferramentas para simplificar a utilização do Redux.
+- **FontAwesome**: Conjunto de ícones para uso em interfaces web.
 
-### `npm start`
+## Configuração e Execução
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pré-requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Certifique-se de ter o Node.js e npm (ou yarn) instalados na sua máquina.
 
-### `npm test`
+### Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seu-usuario/sisvenda.git
+   cd sisvenda
+2. Instale as Dependências: 
+   ```sh
+   npm install
+### Executando a aplicação
 
-### `npm run build`
+3. Para iniciar a aplicação em modo de desenvolvimento, execute:
+   ```sh
+   npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A aplicação estará disponível em http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Arquitetura do Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Estrutura de Pastas
 
-### `npm run eject`
+- **src/:** Contém todo o código-fonte da aplicação.
+- **components/:** Componentes React reutilizáveis.
+- **features/:** Funcionalidades específicas do Redux Toolkit.
+- **pages/:** Páginas da aplicação.
+- **assets/:** Recursos estáticos como imagens e estilos.
+- **App.js:** Componente principal da aplicação.
+- **index.js:** Ponto de entrada da aplicação.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Escolhas Arquitetônicas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React:** Escolhido pela sua eficiência e flexibilidade na construção de interfaces de usuário.
+- **Redux Toolkit:** Utilizado para gerenciamento de estado, simplificando a configuração e proporcionando uma melhor estruturação do código.
+- **React Router:** Para gerenciamento de rotas, permitindo uma navegação fluida entre diferentes páginas.
+- **FontAwesome:** Para ícones consistentes e visualmente atraentes.
+- **Testing Library:** Para garantir a qualidade do código e a funcionalidade correta dos componentes através de testes.

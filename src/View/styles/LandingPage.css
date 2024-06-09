@@ -1,0 +1,48 @@
+.bg-page {
+    justify-content: space-around;
+}
+
+.card-landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    width: 250px;
+    padding: 30px;
+    margin-right: 100px;
+    border-radius: 9px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    animation: fadeIn 1s forwards;
+}
+
+.img-landing-page {
+    height: 220px;
+    animation: fadeIn 2s forwards;
+}
+
+.landing-page {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.msgLogout{
+    font-size: 13px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: rgba(0, 255, 0, 0.5) 5px solid;
+    opacity: 0;
+    animation: fadeIn 0.1s forwards, fadeOut 0.1s forwards 3s;
+}
