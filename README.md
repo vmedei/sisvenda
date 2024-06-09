@@ -1,6 +1,6 @@
 # SisVenda
 
-SisVenda é uma aplicação web desenvolvida para uma task do processo seletivo para o cargo de estágio em desenvolvimento para a empresa Solução Tributos. Feito em React, trata-se de um sistema simples para gerenciamento de vendas.
+SisVenda é uma aplicação web desenvolvida por mim, **Vinicius Alves Medeiros**, para uma task do processo seletivo para o cargo de estágio em desenvolvimento da empresa Solução Tributos. Trata-se de um sistema simples para gerenciamento de vendas.
 
 ## Tecnologias Utilizadas
 
@@ -8,6 +8,7 @@ SisVenda é uma aplicação web desenvolvida para uma task do processo seletivo 
 - **React Redux**: Integração do Redux com o React para gerenciamento de estado.
 - **Redux Toolkit**: Conjunto de ferramentas para simplificar a utilização do Redux.
 - **FontAwesome**: Conjunto de ícones para uso em interfaces web.
+- **Adobe Illustrator**: Manipulação de objetos vetoriais e reproduzir a logo da empresa em alta definição.
 
 ## Configuração e Execução
 
@@ -18,30 +19,30 @@ Certifique-se de ter o Node.js e npm (ou yarn) instalados na sua máquina.
 ### Instalação
 
 1. Clone o repositório:
-   ```
-   git clone https://github.com/vmedei/sisvenda.git
-   cd sisvenda
-   ```
+```
+git clone https://github.com/vmedei/sisvenda.git
+cd sisvenda
+```
 
 2. Instale as Dependências: 
-   ```
-   npm install
-   ```
+```
+npm install
+```
 
 ### Executando a aplicação
 
 1. Para iniciar a aplicação em modo de desenvolvimento, execute:
-   ```
-   npm start
-   ```
+```
+npm start
+```
 
 A aplicação estará disponível em http://localhost:3000.
 
 2. Faça login utilizando um dos dados mockados:
-   ```
-   email: 'usuario1@teste.com', senha: '001'
-   email: 'usuaria2@teste.com', senha: '002'
-   ```
+```
+email: 'usuario1@teste.com', senha: '001'
+email: 'usuaria2@teste.com', senha: '002'
+```
 
 ## Arquitetura do Projeto
 
@@ -92,3 +93,7 @@ A aplicação estará disponível em http://localhost:3000.
 - **Redux Toolkit:** Utilizado para gerenciamento de estado e melhor estruturação do código.
 - **Estilização** Toda estilização foi feita utilizando CSS e SCSS.
 - **Dados iniciais** O sistema foi implementado com dados mockados no sistema, presentes no arquivo **src/Store/mockData.js** e as alterações foram feitas no gerenciador de estados globais.
+
+### Escolhas Visuais
+
+Foi mantida partes da identidade visual original da empresa *Solução Tributos*, como a paleta de cores, a marca, reproduzida por mim em alta resolução utilizando Adobe Illustrator, e outros elementos. Entretanto, busquei ir além da simples replicação, implementei uma visão pessoal e mais moderna aos elementos das páginas, alinhando sempre com os valores e objetivos da empresa.
