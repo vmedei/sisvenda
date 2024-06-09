@@ -1,13 +1,14 @@
-import React from 'react'
-import './Home.css'
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  return (
-    <>
-        <Link to="/login" className='btn__primary'>LOGIN</Link>
-    </>
-  )
-}
+    const navigate = useNavigate();
 
-export default Home
+    useEffect(() => {
+        navigate('/login');
+    }, [navigate]);
+
+    return null; // Como estamos redirecionando, não precisamos renderizar nada
+};
+
+export default Home;
