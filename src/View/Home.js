@@ -8,7 +8,7 @@ const Home = () => {
         navigate('/login');
     }, [navigate]);
 
-    return null; // Como estamos redirecionando, não precisamos renderizar nada
+    return null; 
 };
 
 export default Home;

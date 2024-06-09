@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './styles/LandingPage.css'
-import logo from '../components/images/logo_completa1.png'
-import { useAuth } from '../utils/auth';
+import './LandingPage.css'
+import '../../App.css'
+import logo from '../../components/images/logo_completa1.png'
+import { useAuth } from '../../utils/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +16,7 @@ const LandingPage = () => {
             {user ? (
                 <>
                     <div className="bg-page">
-                        <button className="link-voltar landing-page" onClick={handleLogout}>
+                        <button className="btn-logout" onClick={handleLogout}>
                             <FontAwesomeIcon icon={faRightFromBracket} />
                         </button>
                         <img className="img-landing-page" src={logo} alt="icone"></img>

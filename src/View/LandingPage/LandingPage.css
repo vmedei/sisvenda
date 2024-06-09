@@ -1,5 +1,5 @@
 .bg-page {
-    justify-content: space-around;
+    gap: 100px;
 }
 
 .card-landing-page {
@@ -23,11 +23,10 @@
     animation: fadeIn 2s forwards;
 }
 
-.landing-page {
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+.btn-logout {
+    position: absolute;
+    top: 30px;
+    left: 30px;
     width: 40px;
     height: 40px;
     text-align: center;

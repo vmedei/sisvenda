@@ -1,9 +1,9 @@
+import './NovaVenda.css'
 import React, { useState } from 'react'
+import { useAuth } from '../../utils/auth';
+import { addVenda } from '../../Store/VendasSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addVenda } from '../Store/VendasSlice';
-import { useAuth } from '../utils/auth';
-import './styles/NovaVenda.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket,
     faAngleLeft,
@@ -115,8 +115,8 @@ function NovaVenda() {
                                     >
                                         <option disabled defaultValue value="">Selecione uma ação</option>
                                         <option value="Orçamento Enviado">Orçamento Enviado</option>
-                                        <option value="Aguardando Pagamento">Pagamento Pendente</option>
-                                        <option value="Concluída">Venda Concluída</option>
+                                        <option value="Aguardando Pagamento">Aguardando Pagamento</option>
+                                        <option value="Venda Concluída">Venda Concluída</option>
                                     </select>
                                 </div>
                                 <div className='form-group-valor'>

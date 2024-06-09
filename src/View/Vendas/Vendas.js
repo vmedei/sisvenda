@@ -1,20 +1,22 @@
+import './Vendas.css'
+import { useAuth } from '../../utils/auth';
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import './styles/Vendas.css'
-import { useAuth } from '../utils/auth';
 import {
     fetchVendasStart,
     fetchVendasSuccess,
     fetchVendasFailure,
     deleteVenda
-} from '../Store/VendasSlice';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRightFromBracket,
+} from '../../Store/VendasSlice';
+import {
+    faRightFromBracket,
     faAngleLeft,
     faTrashCan,
     faFilePen
 } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { calculateTotalVendas } from './VendasUtils'; // Importa as funções
 
 const Vendas = () => {
 
@@ -26,8 +28,6 @@ const Vendas = () => {
     const [showConfirm, setShowConfirm] = useState(false);
     const [vendaToDelete, setVendaToDelete] = useState(null);
     const [msgDel, setMsgDel] = useState('');
-
-    console.log(vendas)
 
     const handleDelete = (id) => {
         setVendaToDelete(id);
@@ -63,10 +63,7 @@ const Vendas = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
-    const totalVendas = vendas.reduce((total, venda) => {
-        const valor = venda.valor || 0;
-        return total + valor;
-    }, 0);
+    const totalVendas = calculateTotalVendas(vendas);
 
     return (
         <>

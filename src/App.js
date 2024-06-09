@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./View/Home";
-import Login from "./View/Login";
-import LandingPage from "./View/LandingPage";
-import Vendas from "./View/Vendas";
-import NovaVenda from "./View/NovaVenda";
-import EditarVenda from "./View/EditarVenda";
+import Login from "./View/Login/Login";
+import LandingPage from "./View/LandingPage/LandingPage";
+import Vendas from "./View/Vendas/Vendas";
+import NovaVenda from "./View/NovaVenda/NovaVenda";
+import EditarVenda from "./View/EditarVenda/EditarVenda";
 import './App.css';
 
 function App() {

@@ -1,42 +1,10 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../Store/UserSlice';
-import icon from '../components/images/logo_icone.png';
-import './styles/Login.css';
-import '../App.css'
-
+import React from 'react';
+import icon from '../../components/images/logo_icone.png';
+import './Login.css';
+import { useLogin } from './LoginUtils';
 
 const Login = () => {
-
-    // states
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
-
-    //redux states
-    const { loading, error } = useSelector((state) => state.user);
-
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
-    
-    const handleLogin = (e) => {
-        e.preventDefault();
-        let userCredentials = {
-            email, password
-        }
-        dispatch(loginUser(userCredentials)).then((result) => {
-            if (result.payload) {
-                setEmail('');
-                setPassword('');
-                setSuccessMessage('Login bem-sucedido! Redirecionando...');
-                setTimeout(() => {
-                    setSuccessMessage('');
-                    navigate('/landing-page');
-                }, 3000); // 2 segundos de espera
-            }
-        })
-    }
+    const { email, setEmail, password, setPassword, loading, error, handleLogin, successMessage } = useLogin();
 
     return (
         <div className="bg-login">
@@ -69,4 +37,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
