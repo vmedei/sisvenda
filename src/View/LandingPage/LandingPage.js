@@ -16,13 +16,17 @@ const LandingPage = () => {
             {user ? (
                 <>
                     <div className="bg-page">
+
                         <button className="btn-logout" onClick={handleLogout}>
                             <FontAwesomeIcon icon={faRightFromBracket} />
                         </button>
+
                         <img className="img-landing-page" src={logo} alt="icone"></img>
+
                         <div className="card-landing-page">
 
                             <h3>Olá, {user.firstName} {user.lastName}</h3>
+                            
                             <div>
                                 <p>Seu e-mail é</p>
                                 <h4>{user.email}</h4>
@@ -37,6 +41,7 @@ const LandingPage = () => {
                     )}
                 </>
             ) : (
+                // Se o usuário não estiver logado, é exibida uma mensagem para fazer login e um botão com link para a página de login.
                 <>
                     <div className="bg-page">Usuário não logado. Favor, realizar login</div>
                     <Link className="btn link-voltar" to='/login'>

@@ -42,12 +42,17 @@ function NovaVenda() {
             {user ? (
                 <>
                     <div className='bg-page'>
+
                         <Link className="btn link-voltar" to="/vendas">
                             <FontAwesomeIcon icon={faAngleLeft} />
                         </Link >
+
                         <div className='card-nova-venda'>
+
                             <h2>Adicionar nova venda</h2>
+
                             <form onSubmit={handleSubmit}>
+
                                 <div className='form-group'>
                                     <label>Vendedor: </label>
                                     <input
@@ -59,6 +64,7 @@ function NovaVenda() {
                                         onChange={(e) => setNomeVendedor(e.target.value)}
                                     />
                                 </div>
+
                                 <div className='form-group'>
                                     <label>Cliente: </label>
                                     <input
@@ -70,6 +76,7 @@ function NovaVenda() {
                                         onChange={(e) => setNomeCliente(e.target.value)}
                                     />
                                 </div>
+
                                 <div className='form-group'>
                                     <label>Produto: </label>
                                     <div className='radio'>
@@ -105,6 +112,7 @@ function NovaVenda() {
                                         </label>
                                     </div>
                                 </div>
+
                                 <div className='form-group'>
                                     <label>Ultima Ação: </label>
                                     <select
@@ -119,6 +127,7 @@ function NovaVenda() {
                                         <option value="Venda Concluída">Venda Concluída</option>
                                     </select>
                                 </div>
+
                                 <div className='form-group-valor'>
                                     <label>Valor: </label>
                                     <div className='valor-group'>
@@ -132,9 +141,11 @@ function NovaVenda() {
                                         />
                                     </div>
                                 </div>
+
                                 <button className='btn-salvar'>
                                     Salvar <FontAwesomeIcon icon={faFloppyDisk} />
                                 </button>
+                                
                             </form>
                         </div>
                     </div>
@@ -143,7 +154,9 @@ function NovaVenda() {
                     )}
                 </>
             ) : (
+                // Se o usuário não estiver logado, é exibida uma mensagem para fazer login e um botão com link para a página de login.
                 <>
+
                     <div className="bg-page">Usuário não logado. Favor, realizar login</div>
                     <Link className="btn link-voltar" to='/login'>
                         <FontAwesomeIcon icon={faRightFromBracket} />

@@ -70,15 +70,20 @@ const Vendas = () => {
             {user ? (
                 <>
                     <div className="bg-page">
+
                         <Link className="btn link-voltar" to="/landing-page">
                             <FontAwesomeIcon icon={faAngleLeft} />
                         </Link >
+
                         <div className="card-vendas">
+
                             <div className="title">
                                 <h2>Gerenciamento de Vendas</h2>
                                 <Link className="btn" to="/vendas/nova-venda">Cadastrar</Link >
                             </div>
+
                             <div className='tabela'>
+
                                 <table>
                                     <thead>
                                         <tr>
@@ -137,6 +142,7 @@ const Vendas = () => {
                         </div>
                     </div>
                     {showConfirm && (
+                        // Card para confirmação de exclusão da venda
                         <div className="modal">
                             <div className="modal-content">
                                 <h3>Confirmar Exclusão</h3>
@@ -151,6 +157,7 @@ const Vendas = () => {
                     )}
                 </>
             ) : (
+                // Se o usuário não estiver logado, é exibida uma mensagem para fazer login e um botão com link para a página de login.
                 <>
                     <div className="bg-page">Usuário não logado. Favor, realizar login</div>
                     <Link className="btn link-voltar" to='/login'>
